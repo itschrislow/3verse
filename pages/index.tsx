@@ -3,6 +3,9 @@ import type { NextPage } from "next";
 
 import { TABS } from "../lib/constants";
 import Layout from "../components/Layout";
+import Offset from "../components/Offset";
+import Buy from "../components/Buy";
+import Stake from "../components/Stake";
 
 const Home: NextPage = () => {
   const [tab, setTab] = useState(TABS.Buy);
@@ -11,9 +14,7 @@ const Home: NextPage = () => {
   const handleConnectWallet = () => setIsWalletConnected(true);
   const handleDisconnectWallet = () => setIsWalletConnected(false);
 
-  const handleTabChange = (tab: TABS) => {
-    setTab(tab);
-  };
+  const handleTabChange = (tab: TABS) => setTab(tab);
 
   return (
     <Layout
@@ -23,9 +24,14 @@ const Home: NextPage = () => {
       handleConnectWallet={handleConnectWallet}
       handleDisconnectWallet={handleDisconnectWallet}
     >
-      {tab === TABS.Buy && <p>Buy</p>}
-      {tab === TABS.Stake && <p>Stake</p>}
-      {tab === TABS.Offset && <p>Offset</p>}
+      {tab === TABS.Buy && <Buy handleTabChange={handleTabChange} />}
+      {tab === TABS.Stake && (
+        <Stake
+          isWalletConnected={isWalletConnected}
+          handleConnectWallet={handleConnectWallet}
+        />
+      )}
+      {tab === TABS.Offset && <Offset />}
     </Layout>
   );
 };
