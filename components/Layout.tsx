@@ -4,6 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon, CreditCardIcon } from "@heroicons/react/solid";
 
 import { navigation, TABS } from "../lib/constants";
+import Balance from "./Balance";
 
 interface LayoutProps {
   currTab: TABS;
@@ -28,6 +29,7 @@ export default function Layout({
     <>
       <div>
         {/* Mobile sidebar */}
+        {/* Ignore for now */}
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
             as="div"
@@ -214,7 +216,7 @@ export default function Layout({
             </button>
           </div>
           <main className="flex h-screen flex-col bg-black pt-6 pb-4 sm:pb-6 lg:pb-8">
-            <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto mb-4 flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
               {/* TAB NAME */}
               <h1 className="text-left text-2xl font-semibold text-white">
                 {currTab}
@@ -240,10 +242,18 @@ export default function Layout({
                 {isWalletConnected ? "Disconnect" : "Connect"}
               </button>
             </div>
-            <div className="mx-auto h-full w-full px-4 sm:px-6 md:px-8">
-              <div className="h-full pt-4">
+            <div className="flex h-full gap-4 px-4 sm:px-6 md:px-8">
+              <div className="h-full w-2/3">
                 <div className="h-full rounded-lg bg-gray-900 p-4 text-white">
                   {children}
+                </div>
+              </div>
+              <div className="flex w-1/3 flex-col gap-4">
+                <div className="h-1/2 rounded-lg bg-gray-900">
+                  <Balance />
+                </div>
+                <div className="flex h-1/2 items-center justify-center rounded-lg bg-gray-900 text-white">
+                  Insert article from Yok Tien
                 </div>
               </div>
             </div>
