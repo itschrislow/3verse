@@ -50,7 +50,7 @@ const Buy = ({ handleTabChange }: BuyProps) => {
               <p>Mint GreenLand {landId && "#" + landId}</p>
             </div>
             <div className="pl-12">
-              <button className="w-full self-end rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white">
+              <button className="bg-primary w-full self-end rounded-lg px-4 py-2 text-sm font-medium text-white">
                 Mint
               </button>
             </div>
@@ -64,7 +64,7 @@ const Buy = ({ handleTabChange }: BuyProps) => {
             <div className="pl-12">
               <button
                 onClick={() => handleTabChange(TABS.Stake)}
-                className="w-full self-end rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white"
+                className="bg-primary w-full self-end rounded-lg px-4 py-2 text-sm font-medium text-white"
               >
                 Stake
               </button>

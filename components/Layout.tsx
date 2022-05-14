@@ -159,9 +159,8 @@ export default function Layout({
               </div>
               <nav className="mt-5 flex-1 space-y-1 px-2">
                 {navigation.map((item) => (
-                  <div className="relative">
+                  <div key={item.name} className="relative">
                     <button
-                      key={item.name}
                       onClick={() => handleTabChange(item.name)}
                       className={`
                       ${
@@ -174,7 +173,7 @@ export default function Layout({
                     >
                       <item.icon
                         className={`
-                        mr-3 h-6 w-6 flex-shrink-0 rounded-md bg-green-600 p-1 text-white
+                        bg-primary mr-3 h-6 w-6 flex-shrink-0 rounded-md p-1 text-white
                       `}
                         aria-hidden="true"
                       />

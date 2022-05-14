@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#77bb3f",
+      },
       backgroundImage: {
         "forest-map": "url('/static/map.png')",
       },
