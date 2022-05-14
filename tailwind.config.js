@@ -10,6 +10,7 @@ module.exports = {
       },
       backgroundImage: {
         "forest-map": "url('/static/map.png')",
+        article: "url('/static/article.jpg')",
       },
       gridTemplateColumns: {
         16: "repeat(16, minmax(0, 1fr))",
