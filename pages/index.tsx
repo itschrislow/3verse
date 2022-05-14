@@ -31,7 +31,12 @@ const Home: NextPage = () => {
           handleConnectWallet={handleConnectWallet}
         />
       )}
-      {tab === TABS.Offset && <Offset />}
+      {tab === TABS.Offset && (
+        <Offset
+          isWalletConnected={isWalletConnected}
+          handleConnectWallet={handleConnectWallet}
+        />
+      )}
     </Layout>
   );
 };
