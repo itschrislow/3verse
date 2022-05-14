@@ -5,8 +5,8 @@ import {
 } from "@heroicons/react/solid";
 
 export enum TABS {
-  Buy = "Buy Forest",
-  Stake = "Stake Forest",
+  Buy = "Buy Trees",
+  Stake = "Stake Trees",
   Offset = "Offset",
 }
 
