@@ -181,6 +181,7 @@ export default function Layout({
             </button>
           </div>
           <main className="flex h-screen flex-col overflow-y-auto bg-black pt-6 pb-4 sm:pb-6 lg:pb-8">
+            {/* SIDEBAR */}
             <div className="mx-auto mb-4 flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
               {/* TAB NAME */}
               <h1 className="text-left text-2xl font-semibold text-white">
@@ -207,7 +208,8 @@ export default function Layout({
                 {isWalletConnected ? "Disconnect" : "Connect"}
               </button>
             </div>
-            <div className="flex h-full gap-4 px-4 sm:px-6 md:px-8">
+            {/* DASHBOARD */}
+            <div className="flex grow gap-4 px-4 sm:px-6 md:px-8">
               <div className="h-full w-2/3">
                 <div className="h-full rounded-lg bg-gray-900 p-4 text-white">
                   {children}
