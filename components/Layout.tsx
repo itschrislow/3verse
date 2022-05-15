@@ -13,6 +13,8 @@ interface LayoutProps {
   isWalletConnected: boolean;
   handleConnectWallet: () => void;
   handleDisconnectWallet: () => void;
+  plotBalance: number;
+  tokenBalance: number;
   children: React.ReactNode;
 }
 
@@ -22,6 +24,8 @@ export default function Layout({
   isWalletConnected,
   handleConnectWallet,
   handleDisconnectWallet,
+  plotBalance,
+  tokenBalance,
   children,
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -176,7 +180,7 @@ export default function Layout({
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <main className="flex h-screen flex-col bg-black pt-6 pb-4 sm:pb-6 lg:pb-8">
+          <main className="flex h-screen flex-col overflow-y-auto bg-black pt-6 pb-4 sm:pb-6 lg:pb-8">
             <div className="mx-auto mb-4 flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
               {/* TAB NAME */}
               <h1 className="text-left text-2xl font-semibold text-white">
@@ -211,7 +215,10 @@ export default function Layout({
               </div>
               <div className="flex w-1/3 flex-col gap-4">
                 <div className="h-1/2 rounded-lg bg-gray-900">
-                  <Balance />
+                  <Balance
+                    plotBalance={plotBalance}
+                    tokenBalance={tokenBalance}
+                  />
                 </div>
                 <div className="flex h-1/2 items-center justify-center">
                   <Article />

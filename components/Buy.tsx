@@ -4,9 +4,17 @@ import { TABS } from "../lib/constants";
 
 interface BuyProps {
   handleTabChange: (tab: TABS) => void;
+  isWalletConnected: boolean;
+  handleConnectWallet: () => void;
+  addPlotBalance: () => void;
 }
 
-const Buy = ({ handleTabChange }: BuyProps) => {
+const Buy = ({
+  handleTabChange,
+  isWalletConnected,
+  handleConnectWallet,
+  addPlotBalance,
+}: BuyProps) => {
   const [landId, setLandId] = useState<number>();
 
   return (
@@ -45,8 +53,13 @@ const Buy = ({ handleTabChange }: BuyProps) => {
               <p>Buy TREE token {landId && "#" + landId}</p>
             </div>
             <div className="pl-12">
-              <button className="w-full self-end rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white">
-                Buy
+              <button
+                onClick={() =>
+                  isWalletConnected ? addPlotBalance() : handleConnectWallet()
+                }
+                className="w-full self-end rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white"
+              >
+                {isWalletConnected ? "Buy" : "Connect Wallet"}
               </button>
             </div>
             {/* STEP 3 */}
