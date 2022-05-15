@@ -4,13 +4,17 @@ const Balance = () => {
       <h3 className="mb-4 text-lg font-semibold text-white">Balance</h3>
       {/* LAND */}
       <div className="mb-4">
-        <p className="text-5xl font-semibold text-white">1</p>
-        <p className="text-lg font-semibold text-white/80">LAND</p>
+        <p className="text-5xl font-semibold text-white">2</p>
+        <p className="text-lg font-semibold uppercase text-white/80">
+          3verse TOKENS
+        </p>
       </div>
       {/* LAND TOKENS */}
       <div className="mb-4">
-        <p className="text-5xl font-semibold text-white">5</p>
-        <p className="text-lg font-semibold text-white/80">TOKENS</p>
+        <p className="text-5xl font-semibold text-white">18.17</p>
+        <p className="text-lg font-semibold uppercase text-white/80">
+          O² TOKENS
+        </p>
       </div>
     </div>
   );
