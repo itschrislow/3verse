@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import Offset from "../components/Offset";
 import Buy from "../components/Buy";
 import Stake from "../components/Stake";
+import Exchange from "../components/Exchange";
 
 const Home: NextPage = () => {
   const [tab, setTab] = useState(TABS.Buy);
@@ -37,6 +38,7 @@ const Home: NextPage = () => {
           handleConnectWallet={handleConnectWallet}
         />
       )}
+      {tab === TABS.Exchange && <Exchange />}
     </Layout>
   );
 };
