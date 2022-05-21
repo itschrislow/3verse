@@ -14,6 +14,7 @@ interface LayoutProps {
   handleConnectWallet: () => void;
   handleDisconnectWallet: () => void;
   treeTokenBalance: number;
+  stakedTreeTokenBalance: number;
   o2TokenBalance: number;
   children: React.ReactNode;
 }
@@ -25,6 +26,7 @@ export default function Layout({
   handleConnectWallet,
   handleDisconnectWallet,
   treeTokenBalance,
+  stakedTreeTokenBalance,
   o2TokenBalance,
   children,
 }: LayoutProps) {
@@ -219,6 +221,7 @@ export default function Layout({
                 <div className="h-1/2 rounded-lg bg-gray-900">
                   <Balance
                     treeTokenBalance={treeTokenBalance}
+                    stakedTreeTokenBalance={stakedTreeTokenBalance}
                     o2TokenBalance={o2TokenBalance}
                   />
                 </div>

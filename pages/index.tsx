@@ -15,7 +15,8 @@ const Home: NextPage = () => {
   const [isWalletConnected, setIsWalletConnected] = useState(false);
   const [showConnectWalletModal, setShowConnectWalletModal] = useState(false);
 
-  const [treeTokenBalance, setTreeTokenBalance] = useState(2);
+  const [treeTokenBalance, setTreeTokenBalance] = useState(1);
+  const [stakedTreeTokenBalance, setStakedTreeTokenBalance] = useState(2);
   const [o2TokenBalance, setO2TokenBalance] = useState(18.17);
 
   const handleOpenConnectWalletModal = () => setShowConnectWalletModal(true);
@@ -40,6 +41,7 @@ const Home: NextPage = () => {
         handleConnectWallet={handleConnectWallet}
         handleDisconnectWallet={handleDisconnectWallet}
         treeTokenBalance={treeTokenBalance}
+        stakedTreeTokenBalance={stakedTreeTokenBalance}
         o2TokenBalance={o2TokenBalance}
       >
         {tab === TABS.Buy && (
@@ -54,6 +56,10 @@ const Home: NextPage = () => {
           <Stake
             isWalletConnected={isWalletConnected}
             handleConnectWallet={handleConnectWallet}
+            treeTokenBalance={treeTokenBalance}
+            setTreeTokenBalance={setTreeTokenBalance}
+            stakedTreeTokenBalance={stakedTreeTokenBalance}
+            setStakedTreeTokenBalance={setStakedTreeTokenBalance}
           />
         )}
         {tab === TABS.Offset && (

@@ -4,13 +4,38 @@ import { Tab } from "@headlessui/react";
 interface StakeProps {
   isWalletConnected: boolean;
   handleConnectWallet: () => void;
+  treeTokenBalance: number;
+  setTreeTokenBalance: React.Dispatch<React.SetStateAction<number>>;
+  stakedTreeTokenBalance: number;
+  setStakedTreeTokenBalance: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Stake = ({ isWalletConnected, handleConnectWallet }: StakeProps) => {
+const Stake = ({
+  treeTokenBalance,
+  setTreeTokenBalance,
+  stakedTreeTokenBalance,
+  setStakedTreeTokenBalance,
+  isWalletConnected,
+  handleConnectWallet,
+}: StakeProps) => {
   const [isStake, setIsStake] = useState(0);
+  const [amount, setAmount] = useState("");
 
-  const handleStake = () => {};
-  const handleUnstake = () => {};
+  const handleStake = () => {
+    if (treeTokenBalance >= parseInt(amount)) {
+      setTreeTokenBalance(treeTokenBalance - parseInt(amount));
+      setStakedTreeTokenBalance(stakedTreeTokenBalance + parseInt(amount));
+      setAmount("");
+    }
+  };
+
+  const handleUnstake = () => {
+    if (stakedTreeTokenBalance >= parseInt(amount)) {
+      setTreeTokenBalance(treeTokenBalance + parseInt(amount));
+      setStakedTreeTokenBalance(stakedTreeTokenBalance - parseInt(amount));
+      setAmount("");
+    }
+  };
 
   return (
     <div className="flex h-full flex-col gap-4">
@@ -46,8 +71,10 @@ const Stake = ({ isWalletConnected, handleConnectWallet }: StakeProps) => {
               type="number"
               name="amount"
               id="amount"
-              className="block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+              className="block w-full rounded-md border-gray-300 text-black shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
               placeholder={`Amount to ${isStake === 0 ? "stake" : "unstake"}`}
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
             />
           </div>
         </div>
@@ -92,7 +119,13 @@ const Stake = ({ isWalletConnected, handleConnectWallet }: StakeProps) => {
       </div>
       {/* BUTTON */}
       <button
-        onClick={() => (isWalletConnected ? null : handleConnectWallet())}
+        onClick={() =>
+          isWalletConnected
+            ? isStake === 0
+              ? handleStake()
+              : handleUnstake()
+            : handleConnectWallet()
+        }
         className="mt-2 w-full self-end rounded-lg bg-primary px-4 py-2.5 text-sm font-medium leading-5 text-white"
       >
         {!isWalletConnected
