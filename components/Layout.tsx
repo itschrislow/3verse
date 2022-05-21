@@ -13,7 +13,7 @@ interface LayoutProps {
   isWalletConnected: boolean;
   handleConnectWallet: () => void;
   handleDisconnectWallet: () => void;
-  plotBalance: number;
+  treeTokenBalance: number;
   o2TokenBalance: number;
   children: React.ReactNode;
 }
@@ -24,7 +24,7 @@ export default function Layout({
   isWalletConnected,
   handleConnectWallet,
   handleDisconnectWallet,
-  plotBalance,
+  treeTokenBalance,
   o2TokenBalance,
   children,
 }: LayoutProps) {
@@ -218,7 +218,7 @@ export default function Layout({
               <div className="flex w-1/3 flex-col gap-4">
                 <div className="h-1/2 rounded-lg bg-gray-900">
                   <Balance
-                    plotBalance={plotBalance}
+                    treeTokenBalance={treeTokenBalance}
                     o2TokenBalance={o2TokenBalance}
                   />
                 </div>
