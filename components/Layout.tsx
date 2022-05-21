@@ -14,7 +14,7 @@ interface LayoutProps {
   handleConnectWallet: () => void;
   handleDisconnectWallet: () => void;
   plotBalance: number;
-  tokenBalance: number;
+  o2TokenBalance: number;
   children: React.ReactNode;
 }
 
@@ -25,7 +25,7 @@ export default function Layout({
   handleConnectWallet,
   handleDisconnectWallet,
   plotBalance,
-  tokenBalance,
+  o2TokenBalance,
   children,
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -219,7 +219,7 @@ export default function Layout({
                 <div className="h-1/2 rounded-lg bg-gray-900">
                   <Balance
                     plotBalance={plotBalance}
-                    tokenBalance={tokenBalance}
+                    o2TokenBalance={o2TokenBalance}
                   />
                 </div>
                 <div className="flex h-1/2 items-center justify-center">

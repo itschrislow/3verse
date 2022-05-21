@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   const [showConnectWalletModal, setShowConnectWalletModal] = useState(false);
 
   const [plotBalance, setPlotBalance] = useState(2);
-  const [tokenBalance, setTokenBalance] = useState(18.17);
+  const [o2TokenBalance, setO2TokenBalance] = useState(18.17);
 
   const handleOpenConnectWalletModal = () => setShowConnectWalletModal(true);
   const handleCloseConnectWalletModal = () => setShowConnectWalletModal(false);
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
         handleConnectWallet={handleConnectWallet}
         handleDisconnectWallet={handleDisconnectWallet}
         plotBalance={plotBalance}
-        tokenBalance={tokenBalance}
+        o2TokenBalance={o2TokenBalance}
       >
         {tab === TABS.Buy && (
           <Buy
@@ -60,8 +60,8 @@ const Home: NextPage = () => {
           <Offset
             isWalletConnected={isWalletConnected}
             handleConnectWallet={handleConnectWallet}
-            tokenBalance={tokenBalance}
-            setTokenBalance={setTokenBalance}
+            o2TokenBalance={o2TokenBalance}
+            setO2TokenBalance={setO2TokenBalance}
           />
         )}
         {tab === TABS.Exchange && <Exchange />}

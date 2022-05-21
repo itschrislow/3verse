@@ -1,9 +1,9 @@
 interface BalanceProps {
   plotBalance: number;
-  tokenBalance: number;
+  o2TokenBalance: number;
 }
 
-const Balance = ({ plotBalance, tokenBalance }: BalanceProps) => {
+const Balance = ({ plotBalance, o2TokenBalance }: BalanceProps) => {
   return (
     <div className="p-4">
       <h3 className="mb-4 text-lg font-semibold text-white">Balance</h3>
@@ -16,7 +16,7 @@ const Balance = ({ plotBalance, tokenBalance }: BalanceProps) => {
       </div>
       {/* LAND TOKENS */}
       <div className="mb-4">
-        <p className="text-5xl font-semibold text-white">{tokenBalance}</p>
+        <p className="text-5xl font-semibold text-white">{o2TokenBalance}</p>
         <p className="text-lg font-semibold uppercase text-white/80">
           O² TOKENS
         </p>
