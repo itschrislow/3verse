@@ -124,10 +124,20 @@ const Stake = ({
                 <p>21kg</p>
               </div>
             </div>
-            <p className="py-2 text-center text-xl">
-              Annual CO² offset per plot is{" "}
-              <span className="font-semibold">102kg</span>
-            </p>
+            <div
+              className={`flex items-center text-lg ${
+                isStake === 0 && amount ? "justify-between" : "justify-center"
+              }`}
+            >
+              {isStake === 0 && amount && <p>{amount}</p>}
+              {isStake === 0 && amount && <p>x</p>}
+              <p className="py-2 text-center">
+                Annual CO² offset per TREE TOKEN is{" "}
+                <span className="font-semibold">102kg</span>
+              </p>
+              {isStake === 0 && amount && <p>=</p>}
+              {isStake === 0 && amount && <p>{parseInt(amount) * 102}kg</p>}
+            </div>
           </div>
         </div>
         {/* BUTTON */}
