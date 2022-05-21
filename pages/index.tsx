@@ -60,6 +60,8 @@ const Home: NextPage = () => {
           <Offset
             isWalletConnected={isWalletConnected}
             handleConnectWallet={handleConnectWallet}
+            tokenBalance={tokenBalance}
+            setTokenBalance={setTokenBalance}
           />
         )}
         {tab === TABS.Exchange && <Exchange />}

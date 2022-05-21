@@ -6,9 +6,16 @@ import SuccessModal from "./Modal/SuccessModal";
 interface OffsetProps {
   isWalletConnected: boolean;
   handleConnectWallet: () => void;
+  tokenBalance: number;
+  setTokenBalance: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Offset = ({ isWalletConnected, handleConnectWallet }: OffsetProps) => {
+const Offset = ({
+  tokenBalance,
+  setTokenBalance,
+  isWalletConnected,
+  handleConnectWallet,
+}: OffsetProps) => {
   const [hasOffset, setHasOffset] = useState(false);
   const [showOffsetCertificate, setShowOffsetCertificate] = useState(false);
   const [shared, setShared] = useState(false);
@@ -19,9 +26,15 @@ const Offset = ({ isWalletConnected, handleConnectWallet }: OffsetProps) => {
   const [message, setMessage] = useState<string>("");
 
   const handleSubmitForm = () => {
+    // deduct token balance
+    setTokenBalance(tokenBalance - parseFloat(co2Offset));
+
+    // clear form
     setCo2Offset("");
     setName("");
     setMessage("");
+
+    // show certificate
     setHasOffset(true);
   };
 
