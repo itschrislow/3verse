@@ -23,3 +23,18 @@ Individuals/organizations who wish to offset their carbon footprint can redeem $
 **Offset** - Offset your carbon footprint to go carbon neutral to benefit the environment
 
 **Exchange** - Trade your $TREE or $O2 token(s) on the marketplace
+
+## Installation
+
+Clone the project
+
+```
+git clone https://github.com/itschrislow/3verse.git
+```
+
+Install dependencies and run in development mode
+
+```
+yarn
+yarn dev
+```
