@@ -2,9 +2,7 @@
   <img src="/public/static/logo_words_white.png" alt="3verse Logo" width="150px" />
 </div>
 
-<h3 align="center">
-  Fight climate change with digital tokens backed by real trees
-</h3>
+<br />
 
 Disclaimer: This solution is developed for [ClimateHack](https://climatehack.io/) to address climate change.
 
