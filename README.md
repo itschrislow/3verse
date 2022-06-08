@@ -1,23 +1,27 @@
-# Next.js + Tailwind CSS Example
+<div align="center">
+  <img src="/public/static/logo_words_white.png" alt="3verse Logo" width="150px" />
+</div>
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+<h3 align="center">
+  Fight climate change with digital tokens backed by real trees
+</h3>
 
-## Deploy your own
+Disclaimer: This solution is developed for [ClimateHack](https://climatehack.io/) to address climate change.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+## Overview
+  
+Land owners with more than 10 hectares of trees can tokenize their trees and mint 1 $TREE token for every 1 kilogram of CO2 their land offsets (vested over a period of 10 years).
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+$TREE tokens are listed on 3verse where interested organizations/individuals can purchase and stake for $O2 tokens (Daily yield per $TREE token is 0.29 $O2 tokens).
 
-## How to use
+Individuals/organizations who wish to offset their carbon footprint can redeem $O2 tokens (1 $O2 token = 1kg of CO2) in exchange for an on-chain carbon credit certificate.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+## Features
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app -- --example with-tailwindcss with-tailwindcss-app
-```
+**Buy** - Purchase $TREE token(s) you wish to own.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+**Stake** - Stake your $TREE token(s) to receive $O2 tokens
+
+**Offset** - Offset your carbon footprint to go carbon neutral to benefit the environment
+
+**Exchange** - Trade your $TREE or $O2 token(s) on the marketplace
