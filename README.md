@@ -4,7 +4,7 @@
 
 <br />
 
-Disclaimer: This solution is developed for [ClimateHack](https://climatehack.io/) to address climate change.
+This solution is developed for [ClimateHack](https://climatehack.io/) to address climate change.
 
 ## Overview
   
