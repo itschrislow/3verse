@@ -14,6 +14,8 @@ $TREE tokens are listed on 3verse where interested organizations/individuals can
 
 Individuals/organizations who wish to offset their carbon footprint can redeem $O2 tokens (1 $O2 token = 1kg of CO2) in exchange for an on-chain carbon credit certificate.
 
+[View landing page](https://3verse-landing-page.vercel.app/)
+
 ## Features
 
 **Buy** - Purchase $TREE token(s) you wish to own.
